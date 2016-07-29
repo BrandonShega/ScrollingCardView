@@ -8,16 +8,29 @@
 
 import UIKit
 
+enum ConstraintDirection {
+    case Top
+    case Left
+    case Right
+    case Bottom
+}
+
 class ViewController: UIViewController {
+    
+    //MARK: - IBOutlets
+    @IBOutlet weak var bigContainerView: UIView!
+    @IBOutlet weak var smallContainerView: UIView!
+    @IBOutlet weak var myTableView: UITableView!
+    @IBOutlet weak var bigScrollView: UIScrollView!
+    
+    @IBOutlet weak var smallContainerTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var smallContainerLeftConstraint: NSLayoutConstraint!
+    @IBOutlet weak var smallContainerRightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var smallContainerBottomConstraint: NSLayoutConstraint!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 
